@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
     {% load static %}
-    <link rel="stylesheet" href="{% 'survey_form/css/main.css' %}" media="screen" title="Survey" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'survey_form/css/main.css' %}" media="screen" title="Survey" charset="utf-8">
 </head>
 <body>
-    <h1>Survey Form: Django App</h1>
+    <h2><u>Survey Form: Django App</u></h2>
     <div class='main'>
-        <form action='/survey_form', method='POST'>
+        <form action='/result', method='POST'>
         {% csrf_token %}
         Your Name:<input type='text' name='name'>
         Dojo Location:<select>
