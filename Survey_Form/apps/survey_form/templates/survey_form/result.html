@@ -7,11 +7,13 @@
     <title>Survey Results</title>
 </head>
 <body>
-    <h4>Thank you for submitting this form! you have submitted this form {{count}} times now.</h4>
-    <h2><u>Submitted Information:</u></h2>
-    Name:{{name}}
-    Dojo Location:{{location}}
-    Favorite Language:{{language}}
-    Comment:{{comment}}
+    <div class='main'>
+        <h4>Thank you for submitting this form! you have submitted this form {{request.session.count}} times now.</h4>
+        <h2><u>Submitted Information:</u></h2>
+        <p>Name:{{request.session.name}}</p>
+        <p>Dojo Location:{{request.session.locations}}</p>
+        <p>Favorite Language:{{request.session.language}}</p>
+        <p>Comment:{{request.session.comment}}</p>
+    </div>
 </body>
 </html>
