@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% 'survey_form/css/main.css' %}" media="screen" title="Survey" charset="utf-8">
+</head>
+<body>
+    <h1>Survey Form: Django App</h1>
+    <div class='main'>
+        <form action='/survey_form', method='POST'>
+        {% csrf_token %}
+        Your Name:<input type='text' name='name'>
+        Dojo Location:<select>
+            <option value='san_jose'>San Jose</option>
+            <option value='seattle'>Seattle</option>
+            <option value='la'>Los Angeles</option>
+            <option value='dallas'>Dallas</option>
+            <option value='tysons_corner'>Tysons Corner</option>
+            <option value='chicago'>Chicago</option>
+            <option value='tulsa'>Tulsa</option>
+            <option value='east_bay'>East Bay</option>
+        </select>
+        Favorite Language:<select>
+            <option value='python'>Python</option>
+            <option value='html'>HTML</option>
+            <option value='css'>CSS</option>
+            <option value='sql'>SQL</option>
+            <option value='javascript'>Javascript</option>
+            <option value='c#'>C#</option>
+            <option value='php'>PHP</option>
+            <option value='ruby'>Ruby on Rails</option>
+            <option value='ios'>iOS</option>
+            <option value='java'>Java</option>
+        </select>
+        Comment:<textarea name='commet' rows='10' cols='30'></textarea>
+        <input type='submit' value='Submit'>
+        </form>
+    </div>
+</body>
+</html>
